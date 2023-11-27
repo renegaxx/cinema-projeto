@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bacana.css">
+    <title>CINEMA</title>
+</head>
+
+<body>
+    <video autoplay loop muted class="video-bg">
+        <source
+            src="Five Nignts at Freddy's - O Pesadelo sem Fim _ Trailer Oficial 2 Dublado (Universal Studios) - HD.mp4"
+            type="video/mp4">
+    </video>
+    <!-- CONTEUDO INICIAL -->
+    <div id="cima-tudo">
+        <img class="logo" src="logo cinema.png">
+        <div class="texto-cima">
+            <button class="nav-botoes">
+                <p>Filmes</p>
+            </button>
+            <button class="nav-botoes">
+                <p>Catálogo</p>
+            </button>
+            <button class="nav-botoes">
+                <p>Notícias</p>
+            </button>
+            <button class="nav-botoes">
+                <p>Novo</p>
+            </button>
+        </div>
+
+        <div class="menu-search">
+            <img class="imgs1" src="search.png" onclick="togglePesquisa()">
+            <img class="imgs2" src="menu.png" onclick="toggleMenu()">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar...">
+                <button class="nav-botoes" id="searchButton" onclick="togglePesquisa()">
+                    <p>Pesquisar</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="baixo-nav">
+        <div class="texto-baixo-nav">
+            <h1>Melhor Cinema de <br><span>São Paulo</span></h1>
+            <p><i>O Cinema Itaim Paulista destaca-se como uma joia cinematográfica<br> na cidade de São Paulo,
+                    proporcionando aos seus frequentadores uma<br> experiência única e inigualável.</i></p>
+            <button>Navegar</button>
+            <button>Saiba Mais...</button>
+        </div>
+        <img class="img-baixo-nav" src="undraw_horror_movie_3988-removebg-preview.png">
+    </div>
+    <div class="linha-branca"></div>
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!-- Conteúdo do menu direito -->
+    <div class="menu-direito" id="menuDireito">
+
+        <button class="fechar-botao" onclick="fecharMenu()">
+            <p>Fechar</p>
+            <img src="x.png" alt="">
+        </button>
+        <div class="coisas-menu">
+            <a>Desenvolvimento</a>
+            <a>Contato</a>
+            <a>Eventos Adicionais</a>
+            <a>Filmes Concursados</a>
+        </div>
+        <div class="coisas-menu-baixo">
+            <div class="imgs-menu-container">
+                <img class="imgs-menu"
+                    src="facebook-instagram-twitter-and-whatsapp-icon-free-vector-removebg-preview.png">
+                <img class="imgs-menu" src="">
+                <img class="imgs-menu" src="">
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!-- CARROSSEL -->
+    <div class="carrossel-container">
+        <div class="text-carrossel">
+            <h2>Destaques do Cinema:</h2>
+            <i>filmes recém posicionados</i>
+        </div>
+        <div class="carrossel-inner">
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15559_medio.jpg" alt="Imagem 1">
+                <p>Five Nights at Freddys</p>
+                <i>Suspence/Adaptação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15067_medio.jpg" alt="Imagem 2">
+                <p>Trolls 3</p>
+                <i>Animação/comédia</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/13615_medio.jpg" alt="Imagem 3">
+                <p>As Marvels</p>
+                <i>Herói/Ação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15127_medio.jpg" alt="Imagem 4">
+                <p>Wish</p>
+                <i>Animação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/12501_medio.jpg" alt="Imagem 5">
+                <p>Aquaman 2</p>
+                <i>Herói/Ação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15599_medio.jpg" alt="Imagem 6">
+                <p>Patos</p>
+                <i>Ação/Comédia</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/14789_medio.jpg" alt="Imagem 6">
+                <p>Ferrari</p>
+                <i>Fatos Reais/Ação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15001_medio.jpg" alt="Imagem 6">
+                <p>Kraven</p>
+                <i>Herói/Ação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15773_medio.jpg" alt="Imagem 6">
+                <p>Godzilla</p>
+                <i>Destruição/Ação</i>
+            </div>
+            <div class="carrossel-slide">
+                <img src="https://claquete.com.br/fotos/filmes/poster/15405_medio.jpg" alt="Imagem 6">
+                <p>Wonka</p>
+                <i>Ação/Comédia</i>
+            </div>
+            <!-- Adicione mais slides conforme necessário -->
+        </div>
+        <!-- BOTOES DO CARROSSEL -->
+        <button class="prev-btn" onclick="mudarSlide(-1)">
+            <img class="esquerda" src="right.png">
+        </button>
+        <button class="next-btn" onclick="mudarSlide(1)">
+            <img class="direita" src="left.png">
+        </button>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!-- SESSOES -->
+
+
+<!-- FIMZAOOOOO -->
+    <div class="fim">
+        <div class="titulo-fim">
+            <h1>Boas Avaliações do <span>Site</span></h1>
+            <p> Nossa dedicação em proporcionar experiências cinematográficas memoráveis tem sido reconhecida pela
+                comunidade.</p>
+        </div>
+        <div class="template">
+            <div class="rei">
+                <img class="imgs-fim" src="visit.png">
+                <h1>1M+</h1>
+                <i>Visitas no site no mes de outubro</i>
+            </div>
+            <div class="linha-1"></div>
+            <div class="rei">
+                <img class="imgs-fim" src="vendas.png">
+                <h1>200K+</h1>
+                <i>Quantidade de Vendas em produtos</i>
+            </div>
+            <div class="linha-2"></div>
+            <div class="rei">
+                <img class="imgs-fim" src="dislike.png">
+                <h1>9,1</h1>
+                <i>Avaliações pela comunidade do cinema</i>
+            </div>
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Nunito+Sans:opsz,wght@6..12,300&family=Open+Sans&family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    box-sizing: 0;
+    padding: 0;
+}
+body {
+    background-color: #000;
+}
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1510px;
+    height: 1080px;
+    filter: blur(80px);
+    opacity: 0.7; /* Ajuste a opacidade conforme necessário */
+    z-index: -1;
+    margin-top: -200px;
+
+}
+.logo {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 170px;
+}
+#cima-tudo {
+    width: 100%;
+    display: flex;
+}
+.texto-cima {
+    margin-left: 170px;
+}
+.texto-cima p {
+    font-size: 14px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.nav-botoes {
+    border: none;
+    height: 30px;
+    margin-left: 60px;
+    background-color: transparent;
+    margin-top: 20px;
+}
+.nav-botoes::before {
+    margin-left: auto;
+}
+.nav-botoes::after, .nav-botoes::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    transition: 0.5s;
+}
+.nav-botoes:hover::after, nav:hover::before {
+    width: 100%;
+  }
+.search-container {
+    display: flex;
+    overflow: hidden;
+    max-width: 0;
+    transition: max-width 0.3s ease-in-out;
+}
+
+#searchInput {
+    height: 30px;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+#searchButton {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.menu-search {
+    margin-left: 300px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.imgs1 {
+    cursor: pointer;
+    width: 24px;
+    margin-left: 30px;
+    margin-top: 14px;
+    margin-right: 20px;
+}
+
+.imgs2 {
+    margin-left: 10px;
+    cursor: pointer;
+    width: 30px;
+}
+.baixo-nav {
+    display: flex;
+    width: auto;
+    height: 200px;
+    margin-top: 90px;
+    padding: 70px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.texto-baixo-nav h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+.texto-baixo-nav i {
+    color: #b5b5b5;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 17px;
+}
+.linha-branca {
+    height: 1px;
+    width: 1290px;
+    background-color: white;
+    margin-left: 110px;
+    margin-top: 40px;
+}
+
+.texto-baixo-nav span {
+    color: #f44336;
+}
+.texto-baixo-nav button {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    background: transparent;
+    color: black;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 130px;
+    height: 50px;
+    color: white;
+}
+.texto-baixo-nav button:hover {
+    border: 2px solid #f44336;
+    transition: background-color 1.0s ease;
+    font-size: 19px;
+}
+
+.img-baixo-nav {
+    width: 500px;
+    margin-left: 190px;
+}
+.menu-direito {
+    z-index: 3;
+    border-radius: 20px 0 0;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #515050;
+    padding: 10px;
+    box-shadow: 0 0 1000px rgba(0, 0, 0, 0.1);
+}
+#menuDireito {
+    width: 500px;
+    height: 100%;
+    position: fixed;
+}
+/* FECHAR MENU */
+.fechar-botao {
+    margin-left: 370px;
+    border: none;
+    width: auto;
+    display: flex;
+    background:transparent;
+}
+.fechar-botao p {
+    font-size: 15px;
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
+}
+.fechar-botao img {
+    width: 20px;
+    margin-left: 20px;
+}
+.fechar-botao:hover {
+    /* Cor de fundo ao passar o mouse */
+    color: white;
+}
+
+.coisas-menu {
+    margin-top: 200px;
+}
+.imgs-menu {
+    width: 100px;
+}
+.coisas-menu a {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    display: block;
+    padding: 10px;
+    font-size: 26px;
+    color: white; /* Cor do texto normal */
+    text-decoration: none; /* Remove a sublinhado padrão dos links */
+    transition: background-color 1.0s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
+    border-radius: 10px;
+}
+
+.coisas-menu a:hover {
+    background-color: #606060; /* Cor de fundo ao passar o mouse */
+}
+/* carrossel */
+.carrossel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Defina a largura desejada para o contêiner do carrossel */
+    margin: 0 auto; /* Centraliza o carrossel */
+    height: 530px;
+    margin-top: 50px;
+}
+.text-carrossel h2 {
+    color: white;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 100px;
+}
+.text-carrossel i {
+    color: #b5b5b5;
+    margin-left: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.carrossel-inner {
+    margin-top: 30px;
+    display: flex; /* Torna os slides um ao lado do outro */
+    transition: transform 1.0s ease; /* Adiciona uma transição suave ao transformar os slides */
+}
+
+.carrossel-slide {
+    flex: 0 0 auto; /* Impede que os slides cresçam além de seu tamanho original */
+    
+}
+
+.carrossel-slide img {
+    
+    width: 200px; /* Largura inicial */
+    height: auto;
+    margin-left: 20px;
+    transition: width 0.2s ease; /* Adiciona uma transição suave à alteração de largura */
+    border-radius: 5px;
+}
+
+.carrossel-slide p {
+    margin-left: 20px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.carrossel-slide i {
+    margin-left: 20px;
+    color: #b7b7b7;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.carrossel-slide img:hover {
+    width: 230px; /* Largura aumentada ao passar o mouse */
+    border: 3px solid #f44336;
+    
+
+}
+
+
+.prev-btn,
+.next-btn {
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+.next-btn {
+    right: 10px;
+}
+.prev-btn:hover, .next-btn:hover {
+    width: 60px;
+}
+
+
+.esquerda, .direita {
+    width: 30px;
+}
+/* DEPOIS DO CARROSSEL */
+
+/* FIIIMMMM */
+.fim {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:  white;
+    margin-top: 20px;
+    background-color: transparent;
+}
+.titulo-fim h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+}
+.titulo-fim p {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+.titulo-fim span {
+    color: #f44336;
+}
+.template {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #393939;
+    height: 280px;
+}
+.rei {
+    margin-left: 90px;
+}
+.rei h1 {
+    font-size: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+.rei i {
+    font-family: 'Open Sans', sans-serif;
+    color: #b5b5b5;
+}
+.linha-1 {
+    height: 130px;
+    width: 0.5px;
+    background-color: white;
+    margin-left: 70px;
+}
+.linha-2 {
+    background-color: white;
+    width: 0.5px;
+    height: 130px;
+    margin-left: 90px;
+}
+.imgs-fim {
+    width: 110px;
+    height: 100px;
+}
